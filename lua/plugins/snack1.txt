@@ -1,0 +1,20 @@
+--[[
+return {
+  "folke/snacks.nvim",
+  opts = function(_, opts)
+    -- Ensure opts.picker exists
+    opts.picker = opts.picker or {}
+    opts.picker.sources = opts.picker.sources or {}
+
+    -- Configure the files source to show gitignored files
+    opts.picker.sources.files = {
+      hidden = true,
+      follow = true,
+      no_ignore = true,
+      no_ignore_parent = true,
+    }
+
+    return opts
+  end,
+}
+--]]
