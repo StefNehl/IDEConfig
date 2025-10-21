@@ -22,12 +22,12 @@ return {
       opts.picker.sources = opts.picker.sources or {}
 
       -- Configure the files source to show gitignored files
-      opts.picker.sources.files = {
+      local defaultConfig = {
         hidden = true,
-        follow = true,
-        no_ignore = true,
-        no_ignore_parent = true,
+        ignored = true,
       }
+      opts.picker.sources.files = defaultConfig
+      opts.picker.sources.explorer = defaultConfig
 
       --[[
       -- ensures ignored files and dotfiles are visible
