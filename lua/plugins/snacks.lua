@@ -27,7 +27,7 @@ return {
         ignored = true,
       }
       opts.picker.sources.files = defaultConfig
-      opts.picker.sources.explorer = defaultConfig
+      -- opts.picker.sources.explorer = defaultConfig
 
       --[[
       -- ensures ignored files and dotfiles are visible
